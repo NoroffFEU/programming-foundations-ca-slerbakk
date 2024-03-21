@@ -1,8 +1,13 @@
 const television = {
-  brand: "Samsung",
+  brand: {
+    name: "Samsung",
+    hq: "Korea",
+    model: 2021,
+    isSmart: true,
+  },
   powerOn: true,
   volume: 5,
-  channels: "Channel 1, Channel 2, Channel 3",
+  channels: ["Channel 1", "Channel 2", "Channel 3"],
 };
 
 function toggle() {
@@ -23,7 +28,7 @@ let currentChannel = 1;
 let currentVolume = 1;
 
 function previousChannel() {
-  const nextChannel = document.querySelector(".channels");
+  const nextChannel = document.querySelector(".currentChannel");
 
   if (currentChannel === 3) {
     nextChannel.innerText = "Channel 2";
@@ -38,7 +43,7 @@ function previousChannel() {
 }
 
 function nextChannel() {
-  const nextChannel = document.querySelector(".channels");
+  const nextChannel = document.querySelector(".currentChannel");
 
   if (currentChannel === 1) {
     nextChannel.innerText = "Channel 2";
@@ -53,7 +58,7 @@ function nextChannel() {
 }
 
 function volumeDown() {
-  const volume = document.querySelector(".volume");
+  const volume = document.querySelector(".currentVolume");
 
   if (currentVolume > 1) {
     currentVolume--;
@@ -62,7 +67,7 @@ function volumeDown() {
 }
 
 function volumeUp() {
-  const volume = document.querySelector(".volume");
+  const volume = document.querySelector(".currentVolume");
 
   if (currentVolume < 5) {
     currentVolume++;

@@ -6,11 +6,18 @@ body {
   background-color: #ffffff;
 }
 
+.currentChannel {
+  font-size: 36px;
+}
+
+.currentVolume {
+  font-size: 36px;
+}
 .frame {
   background-color: #3c3c3c;
   width: 900px;
   height: 715px;
-  margin: 50 auto;
+  margin: 50px auto;
   border: 1px solid;
 }
 
