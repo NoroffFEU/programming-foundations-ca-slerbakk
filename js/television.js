@@ -8,21 +8,22 @@ const television = {
   powerOn: true,
   volume: 5,
   channels: ["Channel 1", "Channel 2", "Channel 3"],
+  toggle() {
+    const power = document.querySelector(".on");
+    const screen = document.querySelector(".screenOn");
+
+    power.classList.toggle("off");
+    screen.classList.toggle("screenOff");
+
+    if (power.innerText === "On") {
+      power.innerText = "Off";
+      this.powerOn = false;
+    } else {
+      power.innerText = "On";
+      this.powerOn = true;
+    }
+  },
 };
-
-function toggle() {
-  const power = document.querySelector(".on");
-  const screen = document.querySelector(".screenOn");
-
-  power.classList.toggle("off");
-  screen.classList.toggle("screenOff");
-
-  if (power.innerText === "On") {
-    power.innerText = "Off";
-  } else {
-    power.innerText = "On";
-  }
-}
 
 let currentChannel = 1;
 let currentVolume = 1;
