@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Programming Foundations CA</title>
 
-    <script defer src="/js/example.js"></script>
-    <link href='/css/style.css' rel='stylesheet' />
+    <script defer src="/js/television.js"></script>
+    <link href="/css/style.css" rel="stylesheet" />
 
-    <link rel='icon' href='data:;base64,=' />
-</head>
+    <link rel="icon" href="data:;base64,=" />
+  </head>
 
-<body>
-    <h1>Programming Foundations CA</h1>
-</body>
-
+  <body>
+    <div class="frame">
+      <div class="screenOn">
+        <div class="currentChannel">Channel 1</div>
+        <div class="currentVolume">Volume 1</div>
+      </div>
+      <div class="buttons">
+        <div class="toggle">
+          Power:
+          <p>
+            <button onclick="toggle()" class="on">On</button>
+          </p>
+        </div>
+        <div class="channels">
+          Channels:
+          <p>
+            <button onclick="previousChannel()" class="button">Previous</button>
+            <button onclick="nextChannel()" class="button">Next</button>
+          </p>
+        </div>
+        <div class="volume">
+          Volume:
+          <p>
+            <button onclick="volumeDown()" class="button">Lower</button>
+            <button onclick="volumeUp()" class="button">Higher</button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
